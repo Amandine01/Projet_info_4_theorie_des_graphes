@@ -4,15 +4,10 @@
 class Pion
 {
 private:
-    //int m_nb_pion;
     char m_couleur_pion;
-   // int m_ligne_pion;
-   // char m_colonne_pion;
-    // bool m_presence_plateau;
 
 public:
     Pion(char _couleur);
-    //Pion(int _nb_pion,char _couleur_pion,int _ligne_pion,char _colonne_pion,bool _presence_plateau);
     ~Pion();
     bool plateau();
     ///void affichage_pion();

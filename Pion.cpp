@@ -12,7 +12,7 @@ Pion::Pion(int nb_pion,char couleur_pion,int ligne_pion,char colonne_pion,bool p
     }*/
 Pion::Pion(char _couleur)
 {
-    _couleur=m_couleur_pion;
+    m_couleur_pion=_couleur;
 }
 Pion::~Pion(){
 

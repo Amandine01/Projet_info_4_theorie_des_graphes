@@ -33,8 +33,10 @@ void Plateau::initialiser_plateau()
        }
        p.push_back(t);
    }
+   std::cout<<" ABCDEFGH"<<std::endl;
    for (int i=0;i<p.size();i++)
    {
+       std::cout<<i+1;
        for(int j=0;j<p[i].size();j++)
        {
           if((i==4)&(j==4)||(i==3)&(j==3))
@@ -75,6 +77,7 @@ void Plateau::menu_jeu()
         m_sortie_menu = 1;
         this->initialiser_plateau();
         this->deplacer_curseur();
+        system("CLS");
 
     }
     if(m_choix_menu == 2){
@@ -144,9 +147,9 @@ bool quit = false;
                 pConsole->gotoLigCol(x,y+1);
             if (key==115)/// code asciide la lettre s
                 pConsole->gotoLigCol(x,y-1);
-            if (key==27)
-                 pConsole->gotoLigCol(x,y);
-                 std::cout<< "N";
+            //if (key==27)
+                 //pConsole->gotoLigCol(x,y);
+                 //std::cout<< "N";
 
             if (key == 'a' ) // 27 = touche escape
             {
@@ -206,7 +209,7 @@ void Plateau::pageSortie(){
         std::cout << "                                                 " << std::endl << std::endl;
         std::cout << "              MERCI D'ETRE VENU                  " << std::endl << std::endl;
         std::cout << "          A BIENTOT POUR DE NOUVELLES            "<<std::endl;
-        std::cout << "          AVENTURES AU MONDE DU SIAM             "<<std::endl;
+        std::cout << "                                                 "<<std::endl;
         std::cout << "                    :)                           "<<std::endl;
         std::cout << "                                                 "<<std::endl;
         std::cout << "                                                 "<<std::endl;
@@ -215,3 +218,4 @@ void Plateau::pageSortie(){
     ///this->DetectionTouche();
     system("cls");
 }
+

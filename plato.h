@@ -6,7 +6,6 @@ class Plateau
 {
 private:
     std::vector <Pion> m_plateau;
-    //std::vector <Pion> m_pions_du_joueur;
     int m_longueur_plateau;
     int m_largeur_plateau;
 public:
