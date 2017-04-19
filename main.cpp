@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-
+/////////////////////////////////:
 Plateau p;
 //p.initialiser_plateau();
 p.menu_jeu();
