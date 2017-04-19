@@ -3,28 +3,23 @@
 
 class Pion
 {
-private:
-    std::string m_couleur;
-    int m_nb_pion;
+private :
+    int m_couleur; ///0=blanc, 1=noir
+    char m_coord_x;
+    int m_coord_y;
+    int m_on_board; ///1=on board, 0=off board
 
-public:
-    // Constructeurs
-    Pion();
-    Pion(std::string _couleur, int _nb_pion);
-
-    // Destructeur
+public :
+    ///Constructeurs et destructeurs
+    Pion (int _couleur, char _coord_x, int _coord_y, int _on_board);
     ~Pion();
 
-    // Methodes
-    void afficher_pion();
-    bool poser_pion();
-
-    // Accesseurs
-    std::string getCouleur();
-    int getNb_pion();
-
-    void setCouleur(std::string couleur);
-    void setNb_pion(int nb_pion);
+    ///getters et setters
+    int getcouleur();
+    char getcoordx();
+    int getcoordy();
+    int getonboard();
+    void setonboard(int p_on_board);
 };
 
 #endif // PION_H_INCLUDED

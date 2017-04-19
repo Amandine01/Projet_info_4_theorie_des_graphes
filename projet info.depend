@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1492608306 source:c:\users\admin.pc-lab\documents\projet info\projet info\implementation.cpp
+	<iostream>
+	"pion.h"
+	"gamebox.h"
+
+1492608325 c:\users\admin.pc-lab\documents\projet info\projet info\pion.h
+
+1492608338 c:\users\admin.pc-lab\documents\projet info\projet info\gamebox.h
+
