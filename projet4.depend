@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1492179120 source:d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\main.cpp
+	<iostream>
+	"Pion.h"
+	"plato.h"
+	<vector>
+	"console.h"
+
+1491835696 source:d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\pion.cpp
+	"Pion.h"
+	<string>
+
+1491835688 d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\pion.h
+	<string>
+
+1491694182 d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\plateau.h
+	<vector>
+
+1492179828 d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\plato.h
+	"Pion.h"
+	<vector>
+
+1492179051 source:d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\plato.cpp
+	<vector>
+	"plato.h"
+	"pion.h"
+	<iostream>
+	<string>
+	<cstdlib>
+
+1492179872 source:d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\console.cpp
+	"console.h"
+	<conio.h>
+	<windows.h>
+	"console.h"
+
+1492179868 d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\console.h
+	<iostream>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+
