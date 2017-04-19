@@ -1,43 +1,60 @@
 #include <iostream>
-#include "pion.h"
-#include "gamebox.h"
+#include "Pion.h"
+#include "plato.h"
 #include <vector>
+#include "console.h"
+
 
 using namespace std;
 
 int main()
 {
-    vector <Pion> pion_blanc;
-    vector <Pion> pion_noir;
-    char line='A';
-    ///Gamebox plateau[8][8];
-    vector <Gamebox> box;
 
-    ///Initialisation du vecteur de pion blanc
-    for (int i=0; i<64;i++)
-    {
-        pion_blanc.push_back(Pion(0, '0', 0, 0));
-    }
+Plateau p;
+//p.initialiser_plateau();
+p.menu_jeu();
+bool quit = false;
+    Console* pConsole = NULL;
 
-    ///Initialisation du vecteur de pion noir
-    for (int i=0; i<64; i++)
-    {
-        pion_noir.push_back(Pion(0,'0',0,0));
-    }
+    // Alloue la mémoire du pointeur
+    pConsole = Console::getInstance();
+    int x,y;
+    x=y=100;
+    // Affichage avec gotoligcol et couleur
+    pConsole->gotoLigCol(x,y);
 
-    ///Création du tableau de jeu représentant le plateau (8X8)
-    for (int i=0;i<8;i++)
+    pConsole->setColor(COLOR_DEFAULT);
+
+    // Boucle événementielle
+    while (!quit)
     {
-        for (int j=0; j<8;j++)
+        // Si on a appuyé sur une touche du clavier
+        if (pConsole->isKeyboardPressed())
         {
-            box.push_back(Gamebox(line,i+1));
-            ///plateau[i][j]=Gamebox(line,i+1)
-            ///line++;///On incrémente line pour obtenir à chaque tour de boucle, A, puis B, puis C etc....
+            // Récupère le code ASCII de la touche
+            char key = pConsole->getInputKey();
+            ///q est la touche directionnelle permettant daller vers la gauche
+            if (key==113)/// code ascii de la lettre q
+                pConsole->gotoLigCol(x-1,y);
+            if (key==100)/// code ascii de la lettre d
+                pConsole->gotoLigCol(x+1,y);
+             if (key==122)/// code ascii de la lettre z
+                pConsole->gotoLigCol(x,y+1);
+            if (key==115)/// code asciide la lettre s
+                pConsole->gotoLigCol(x,y-1);
+            if (key==27)
+                 pConsole->gotoLigCol(x,y);
+                 cout<< "N";
+
+            if (key == 'a' ) // 27 = touche escape
+            {
+                quit = true;
+            }
         }
-        line++; ///On incrémente line pour obtenir à chaque tour de boucle, A, puis B, puis C etc....
     }
 
-
+    // Libère la mémoire du pointeur !
+    Console::deleteInstance();
 
 
     return 0;

@@ -5,6 +5,8 @@
 #include <string>
 #include <cstdlib>
 #include "console.h"
+#include <cstdio>
+#include <fstream>
 
 Plateau::Plateau()
 {
@@ -24,10 +26,9 @@ void Plateau::initialiser_plateau()
    for(int i=0;i<8;i++)
    {
        std::vector<Pion> t;
-       std::cout<<"a b c d e f g h";
+
          for(int j=0;j<8;j++)
        {
-           std::cout<<i;
            t.push_back(i);
        }
        p.push_back(t);
@@ -62,6 +63,7 @@ void Plateau::menu_jeu()
     std::cout << "1- Pour jouer à deux joueur" << std::endl;
     std::cout << "2- Pour jouer contre l'ordinateur" << std::endl;
     std::cout << "3- Personnaliser votre partie." << std::endl;
+    std::cout << "4- Pour connaitre les regles du jeu" << std::endl << std::endl;
     std::cout << "5- Quitter" << std::endl << std::endl;
     std::cout << "Rentrer la valeur de votre choix : ";
     //Rentre la valeur voulu par le menu
@@ -96,7 +98,7 @@ void Plateau::menu_jeu()
         this->initialiser_plateau();
     }
     if(m_choix_menu == 4){
-        m_sortie = 0;
+        this->pageAccueil();
     }
     else{
         system("cls");
@@ -106,6 +108,9 @@ void Plateau::menu_jeu()
 
     system("cls");
     std::cout << "lejeu se lance";
+    if(m_choix_menu == 5){
+            this->pageSortie();
+    }
 }
 void Plateau::deplacer_curseur()
 {
@@ -152,4 +157,61 @@ bool quit = false;
 
     // Libère la mémoire du pointeur !
     Console::deleteInstance();
+}
+
+//Méthodes affichant des pages de jeu
+void Plateau::pageAccueil(){
+
+    system("cls");
+
+    std::ifstream presentation("presentation.txt");
+    if(presentation)
+    {
+        // On stock dans la chaine le fichier
+        std::string texte;
+
+        // Tant qu'on a pas atteint la fin de regles.txt
+        while(getline(presentation,texte))
+        {
+            // On affiche les règles du jeu
+            std::cout << texte << std::endl;
+        }
+    }
+
+    // Blindage ouverture du fichier
+    else
+    {
+        std::cout << "Erreur fichier presentation" << std::endl;
+    }
+
+    system("PAUSE");
+    system("cls");
+
+    ///this->DetectionTouche();
+    ///system("cls");
+}
+
+void Plateau::pageVictoire(){
+    std::cout << "Bien joue!" << std::endl << std::endl;
+    ///Affiche la page de victoire
+    ///this->DetectionTouche();
+    system("cls");
+}
+
+void Plateau::pageSortie(){
+        std::cout << "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*" << std::endl << std::endl;
+        std::cout << "                                                 " << std::endl << std::endl;
+        std::cout << "                                                 " << std::endl << std::endl;
+        std::cout << "                                                 " << std::endl << std::endl;
+        std::cout << "                                                 " << std::endl << std::endl;
+        std::cout << "              MERCI D'ETRE VENU                  " << std::endl << std::endl;
+        std::cout << "          A BIENTOT POUR DE NOUVELLES            "<<std::endl;
+        std::cout << "          AVENTURES AU MONDE DU SIAM             "<<std::endl;
+        std::cout << "                    :)                           "<<std::endl;
+        std::cout << "                                                 "<<std::endl;
+        std::cout << "                                                 "<<std::endl;
+        std::cout << "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*" << std::endl << std::endl;
+    ///Affiche la page de victoire
+    ///this->DetectionTouche();
+    system("cls");
 }

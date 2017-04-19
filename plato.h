@@ -16,6 +16,10 @@ public:
     void initialiser_plateau();
     void menu_jeu();
     void deplacer_curseur();
+    void enregistrer_partie();
+    void pageAccueil();
+    void pageSortie();
+    void pageVictoire();
     ///accesseurs
     //std::vector <Pion> getPlateau();
     //std::vector <Pion> getPions_du_joueur();
