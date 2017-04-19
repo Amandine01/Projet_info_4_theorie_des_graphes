@@ -1,7 +1,7 @@
 #include "console.h"
 #include <conio.h>
 #include <windows.h>
-#include "console.h"
+
 Console* Console::m_instance = NULL;
 
 Console::Console()
@@ -86,7 +86,7 @@ void Console::setColor(Color col)
             this->_setColor(12, 0);
             break;
         case COLOR_GREEN:
-            this->_setColor(10, 0);
+            this->_setColor(0, 3);
             break;
         case COLOR_BLUE:
             this->_setColor(9, 0);
@@ -101,4 +101,3 @@ void Console::setColor(Color col)
             this->_setColor(7, 0);
     }
 }
-

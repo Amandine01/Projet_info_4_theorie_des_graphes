@@ -2,15 +2,6 @@
 #define CONSOLE_H_INCLUDED
 
 #include <iostream>
-#include <windows.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-#define GAUCHE 'q'
-#define DROITE 'd'
-#define BAS 's'
-#define HAUT 'z'
-#define ESPACE ' '
 
 enum Color
 {
@@ -27,8 +18,8 @@ enum Color
 class Console
 {
     private:
-       // Empecher la création
-         Console();
+        // Empecher la création
+        Console();
         ~Console();
 
         // Empecher la copie d'objet...
@@ -51,6 +42,5 @@ class Console
         int getInputKey();
         void setColor(Color col);
 };
-
 
 #endif // CONSOLE_H_INCLUDED
