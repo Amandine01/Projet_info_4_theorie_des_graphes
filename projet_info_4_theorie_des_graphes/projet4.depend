@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1491695415 source:d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\main.cpp
+	<iostream>
+	"Pion.h"
+	"plato.h"
+	<vector>
+
+1491835696 source:d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\pion.cpp
+	"Pion.h"
+	<string>
+
+1491835688 d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\pion.h
+	<string>
+
+1491694182 d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\plateau.h
+	<vector>
+
+1491815332 d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\plato.h
+	"Pion.h"
+	<vector>
+
+1491836245 source:d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\plato.cpp
+	<vector>
+	"plato.h"
+	"pion.h"
+	<iostream>
+	<string>
+
+1491837052 source:d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\console.cpp
+	"console.h"
+	<conio.h>
+	<windows.h>
+	"console.h"
+
+1491836934 d:\ing2\semestre 2\info_therorie_des_graphes\orhello odelia 1\console.h
+	<iostream>
+
+1492099325 source:c:\users\amandine\dropbox\projet info 4 ing2 - theorie des graphes\odelia\odelia version 1\console.cpp
+	"console.h"
+	<conio.h>
+	<windows.h>
+	"console.h"
+
+1492099327 c:\users\amandine\dropbox\projet info 4 ing2 - theorie des graphes\odelia\odelia version 1\console.h
+	<iostream>
+
